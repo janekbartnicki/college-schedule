@@ -7,24 +7,66 @@
     flex-direction: column;
 
     .dashboard-header { // TODO
-        font-size: 148px;
-        margin-top: 10vh;
+        font-size: 48px;
+        margin: 15vh 0 10vh 0;
+        color: var(--black);
+
+        span {
+            padding: 0 1rem;
+            font-weight: 500;
+            background-color: var(--secondary-color);
+        }
     }
 
     .dashboard-menu {
-        ul {
-            list-style-type: none;
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         .menu-item {
-            text-align: center;
             cursor: pointer;
             padding: 1rem 2rem;
             background-color: var(--secondary-color);
+            margin-top: 4px;
+            width: 15rem;
+            position: relative;
+
+            &:nth-child(even) {
+                background-color: var(--accent-two);
+            }
+
+            // &:hover::before {
+            //     content: '';
+            //     vertical-align: middle;
+            //     position: absolute;
+            //     left: 0;
+            //     top: 0;
+            //     height: 100%;
+            //     width: 0%;
+            //     background-color: var(--accent-one);
+            //     animation: dashboard-item-hover .5s;
+            // }
+
+            &:hover::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 2%;
+                background-color: var(--accent-one);
+                // animation: dashboard-item-hover .5s;
+            }
 
             // &:hover {
-
+            //     background-color: var(--accent-one);
             // }
-        }
+        }   
     }
 }
+
+// @keyframes dashboard-item-hover {
+//     from { width: 0%; color: var(--main-color-text)};
+//     to {width: 100%; color: var(--black)};
+// }
