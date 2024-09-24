@@ -1,0 +1,30 @@
+.dashboard-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .dashboard-header { // TODO
+        font-size: 148px;
+        margin-top: 10vh;
+    }
+
+    .dashboard-menu {
+        ul {
+            list-style-type: none;
+        }
+
+        .menu-item {
+            text-align: center;
+            cursor: pointer;
+            padding: 1rem 2rem;
+            background-color: var(--secondary-color);
+
+            // &:hover {
+
+            // }
+        }
+    }
+}
